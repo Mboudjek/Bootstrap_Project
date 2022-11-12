@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/evo-calendar.min.css">
+    <link rel="stylesheet" href="css/evo-calendar.midnight-blue.min.css">
     <!-- endbuild -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
     
@@ -20,13 +22,21 @@
 <body>
     <header>
         <div class="row" id="headerId">
-            <div class="col-4 col-md-5">
+            <div class="col-4 col-sm-4 col-md-5 mr-auto">
                 <img src="img/gowan_milling2.png" class="img-fluid" />
+            </div>
+            <div class="col-3 col-auto pt-1" id="user">
+                <div class="pt-1" style="font-weight: 900;">
+                    Ivan Monge
+                </div>
+                <div style="font-size: 0.5rem;">
+                    Automation Control Engineer
+                </div>
             </div>
         </div>      
     </header>
 
-    <hr class="divider" size="4"> 
+    <hr class="divider" size="4px"> 
 
     
     <nav class="sidebar bg-black">
@@ -54,38 +64,36 @@
         </div>
     </nav>
 
-    <div class="container" id="topcards">
-        <div class="row">
-            <div class="col-lg-4 mb-4">
-                <div class="card border-primary mb-3" style="max-width: 12rem;">
-                    <div class="card-header">Created Requisitions</div>
-                    <div class="card-body text-primary">
-                      <h5 class="card-title">Primary card title</h5>
-                    </div>
-                </div>                  
+    <div class="card-deck" id="topcards">
+        <div class="card border-primary mb-3" style="max-width: 12rem; max-height: 8rem;">
+            <div class="card-header">Created Requisitions</div>
+            <div class="card-body text-primary text-center">
+                <h5 class="card-title">5</h5>
             </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card border-primary mb-3" style="max-width: 12rem;">
-                    <div class="card-header">Remaining Days Off</div>
-                    <div class="card-body text-primary">
-                      <h5 class="card-title">Primary card title</h5>
-                    </div>
-                </div>   
+        </div>                  
+        <div class="card border-primary mb-3" style="max-width: 12rem; max-height: 8rem;">
+            <div class="card-header">Remaining Days Off</div>
+            <div class="card-body text-primary text-center">
+                <h5 class="card-title">3</h5>
             </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card border-primary mb-3" style="max-width: 12rem;">
-                    <div class="card-header">Other</div>
-                    <div class="card-body text-primary">
-                      <h5 class="card-title">Primary card title</h5>
-                    </div>
-                </div>    
+        </div>   
+        <div class="card border-primary mb-3" style="max-width: 12rem; max-height: 8rem;">
+            <div class="card-header">Travel Expenses</div>
+            <div class="card-body text-primary text-center">
+                <h5 class="card-title">0</h5>
             </div>
-        </div>
+        </div>    
+        <div class="card border-primary mb-3" style="max-width: 12rem; max-height: 8rem;">
+            <div class="card-header">other</div>
+            <div class="card-body text-primary text-center">
+                <h5 class="card-title">0</h5>
+            </div>
+        </div>    
     </div>
 
-    <div class="container">
+    <div class="container" id="maincarousel">
         <div class="row row-content">
-            <div class="col-md-8 mx-auto">
+            <div class="col-md-12 mx-auto mb-4">
                 <div id="homeCarousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <ol class="carousel-indicators">
@@ -114,29 +122,13 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <template>
-        <div>
-          <b-form-group label="Select calendar interactive state" v-slot="{ ariaDescribedby }">
-            <b-form-radio-group
-              v-model="state"
-              :aria-describedby="ariaDescribedby"
-              aria-controls="ex-disabled-readonly"
-            >
-              <b-form-radio value="disabled">Disabled</b-form-radio>
-              <b-form-radio value="readonly">Readonly</b-form-radio>
-              <b-form-radio value="normal">Normal</b-form-radio>
-            </b-form-radio-group>
-          </b-form-group>
-      
-          <b-calendar
-            id="ex-disabled-readonly"
-            :disabled="disabled"
-            :readonly="readonly"
-          ></b-calendar>
+        <div class="row row-content">
+            <div class="col-12">
+                <div id="calendar"></div> 
+            </div>
         </div>
-    </template>
+    </div>
+     
     
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
     <!-- build:js js/main.js -->
@@ -145,5 +137,15 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
     <!-- endbuild -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="javascript/evo-calendar.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#calendar').evoCalendar({
+                theme: "Midnight Blue",   
+            })
+        })
+    </script>
 
 </body>
