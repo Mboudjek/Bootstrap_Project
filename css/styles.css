@@ -37,7 +37,7 @@ hr {
   #topcards {
     position: relative;
     right: 0;
-    left: 220px;
+    left: 0px;
     bottom: 0;
     z-index: 0;
   }

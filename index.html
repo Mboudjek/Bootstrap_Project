@@ -54,7 +54,7 @@
                 <a href="#" class="list-group-item list-group-item-action">
                     <i class="fa fa-fire-extinguisher fa-2x"></i>    
                 </a>
-                <a href="#" class="list-group-item list-group-item-action">
+                <a role="button" class="btn list-group-item list-group-item-action" id="vacRequestButton">
                     <i class="fa fa-plane fa-2x"></i>    
                 </a>
                 <a href="#" class="list-group-item list-group-item-action">
@@ -64,30 +64,78 @@
         </div>
     </nav>
 
-    <div class="card-deck" id="topcards">
-        <div class="card border-primary mb-3" style="max-width: 12rem; max-height: 8rem;">
-            <div class="card-header">Created Requisitions</div>
-            <div class="card-body text-primary text-center">
-                <h5 class="card-title">5</h5>
+    <div id="vacationModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h3 class="modal-title">Vacations Request</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                  <label for="startDate">Start Date</label>
+                                  <input class="form-control" type="date" name="date" id="startDate" placeholder="Enter date">
+                                </div>
+                                <div class="form-group col-md-6">
+                                  <label for="endDate">End Date</label>
+                                  <input class="form-control" type="date" name="date" id="endDate" placeholder="Enter date">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="vacationType">Time Off Policy</label>
+                                <select class="form-control" name="numCampers" id="numCampers">
+                                    <option>Select...</option>
+                                    <option value="1">Vacations</option>
+                                    <option value="2">Sick</option>
+                                    <option value="3">Leave Permission</option>
+                                </select>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
+                                    <button class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                    <button class="btn btn-primary" type="submit">Submite</button>    
+                                </div>
+                            </div>
+                        </form>
+                    </div>    
+                </div>
             </div>
-        </div>                  
-        <div class="card border-primary mb-3" style="max-width: 12rem; max-height: 8rem;">
-            <div class="card-header">Remaining Days Off</div>
-            <div class="card-body text-primary text-center">
-                <h5 class="card-title">3</h5>
-            </div>
-        </div>   
-        <div class="card border-primary mb-3" style="max-width: 12rem; max-height: 8rem;">
-            <div class="card-header">Travel Expenses</div>
-            <div class="card-body text-primary text-center">
-                <h5 class="card-title">0</h5>
-            </div>
-        </div>    
-        <div class="card border-primary mb-3" style="max-width: 12rem; max-height: 8rem;">
-            <div class="card-header">other</div>
-            <div class="card-body text-primary text-center">
-                <h5 class="card-title">0</h5>
-            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row row-content">
+            <div class="col-12 mx-auto">
+                <div class="card-deck" id="topcards">
+                    <div class="card border-primary mb-3" style="max-width: 12rem; max-height: 8rem;">
+                        <div class="card-header">Created Requisitions</div>
+                        <div class="card-body text-primary text-center">
+                            <h5 class="card-title">5</h5>
+                        </div>
+                    </div>                  
+                    <div class="card border-primary mb-3" style="max-width: 12rem; max-height: 8rem;">
+                        <div class="card-header">Remaining Days Off</div>
+                        <div class="card-body text-primary text-center">
+                            <h5 class="card-title">3</h5>
+                        </div>
+                    </div>   
+                    <div class="card border-primary mb-3" style="max-width: 12rem; max-height: 8rem;">
+                        <div class="card-header">Travel Expenses</div>
+                        <div class="card-body text-primary text-center">
+                            <h5 class="card-title">0</h5>
+                        </div>
+                    </div>    
+                    <div class="card border-primary mb-3" style="max-width: 12rem; max-height: 8rem;">
+                        <div class="card-header">other</div>
+                        <div class="card-body text-primary text-center">
+                            <h5 class="card-title">0</h5>
+                        </div>
+                    </div>    
+                </div>
+            </div>    
         </div>    
     </div>
 
@@ -122,6 +170,7 @@
                 </div>
             </div>
         </div>
+
         <div class="row row-content">
             <div class="col-12">
                 <div id="calendar"></div> 
@@ -139,6 +188,7 @@
     <!-- endbuild -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
     <script src="javascript/evo-calendar.min.js"></script>
+    <script src="javascript/scripts"></script>
 
     <script>
         $(document).ready(function() {
