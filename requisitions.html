@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/evo-calendar.min.css">
     <link rel="stylesheet" href="css/evo-calendar.midnight-blue.min.css">
     <!-- endbuild -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
-    
+
     <title>GOWAN MILLING INTRANET</title>
 </head>
 
@@ -33,39 +33,238 @@
                     Automation Control Engineer
                 </div>
             </div>
-        </div>      
+        </div>
     </header>
 
-    <hr class="divider" size="4px"> 
+    <hr class="divider" size="4px">
 
-    
+
     <nav class="sidebar bg-black">
         <div class="position-sticky">
             <div class="list-group list-group-flush">
                 <a href="#" class="list-group-item list-group-item-action" style="background-color:black;opacity:0.7;">
-                    <i class="fa fa-bars fa-2x"></i>    
-                </a>          
+                    <i class="fa fa-bars fa-2x"></i>
+                </a>
                 <a href="#" class="list-group-item list-group-item-action active">
-                    <i class="fa fa-home fa-2x"></i>    
-                </a>    
-                <a href="#" class="list-group-item list-group-item-action">
-                    <i class="fa fa-shopping-cart fa-2x"></i>    
+                    <i class="fa fa-home fa-2x"></i>
                 </a>
                 <a href="#" class="list-group-item list-group-item-action">
-                    <i class="fa fa-fire-extinguisher fa-2x"></i>    
+                    <i class="fa fa-shopping-cart fa-2x"></i>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fa fa-fire-extinguisher fa-2x"></i>
                 </a>
                 <a role="button" class="btn list-group-item list-group-item-action" id="vacRequestButton">
-                    <i class="fa fa-plane fa-2x"></i>    
+                    <i class="fa fa-plane fa-2x"></i>
                 </a>
                 <a href="#" class="list-group-item list-group-item-action">
-                    <i class="fa fa-cog fa-2x"></i>    
+                    <i class="fa fa-cog fa-2x"></i>
                 </a>
             </div>
         </div>
     </nav>
 
+    <div class="container">
+        <div class="row row-content">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">Ship to:</div>
+                    <div class="card-body">
+                        <p>Gowan Milling LLC.</p>
+                        <p>12300 E. County 8th St.</p>
+                        <p>Yuma, AZ 85366</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>Ph. 928-317-5827</p>
+                        <p>Fax. 928-317-0117</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">Bill to:</div>
+                    <div class="card-body">
+                        <p>Gowan Milling LLC.</p>
+                        <p>P.O. Box 5569</p>
+                        <p>Yuma, AZ 85366</p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr class="bg-primary text-light">
+                                    <th>QTY</th>
+                                    <th>Units</th>
+                                    <th>Description</th>
+                                    <th>Unit $</th>
+                                    <th>Total $</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-primary">
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <form>
+                    <div class="col-12">
+                        <h2>Vendor Information:</h2>
+                    </div>
+                    <div class="form-group row">
+                        <label for="name" class="col-md-2 col-form-label">Name</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Placeholder" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="address" class="col-md-2 col-form-label">Address</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="address" name="address" placeholder="Placeholder" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="city" class="col-md-2 col-form-label">City</label>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control" id="city" name="city" placeholder="Placeholder" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="state" class="col-md-2 col-form-label">State</label>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control" id="state" name="state" placeholder="Placeholder" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="zip" class="col-md-2 col-form-label">Zip</label>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control" id="zip" name="zip" placeholder="Placeholder" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="phone" class="col-md-2 col-form-label">Phone</label>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" id="phone" name="phone" placeholder="Placeholder" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="fax" class="col-md-2 col-form-label">Fax</label>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" id="fax" name="fax" placeholder="Placeholder" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="email" class="col-md-2 col-form-label">Email</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Placeholder" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="sales" class="col-md-2 col-form-label">Sales Contact</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="sales" name="sales" placeholder="Placeholder" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="customer" class="col-md-2 col-form-label">Customer Num</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="customer" name="customer" placeholder="Placeholder" />
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <label class="col-sm-6 col-form-label" for="date">Date</label>
+                        <div class="col-sm-6">
+                            <input class="form-control" type="date" id="date" name="date" placeholder="mm/dd/yyyy">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="PO" class="col-md-2 col-form-label">P.O.#</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="PO" name="PO" placeholder="Placeholder" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="account" class="col-md-2 col-form-label">Gowan Account</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="account" name="account"
+                                placeholder="Placeholder" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="request" class="col-md-2 col-form-label">Requested By</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="request" name="request"
+                                placeholder="Placeholder" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="call" class="col-md-2 col-form-label">Call In By</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="call" name="call" placeholder="Placeholder" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col offset-md-2">
+                            C.O.D
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input" id="codYes" name="contactRadios"
+                                    value="yes" />
+                                <label for="codYes" class="form-check-label">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input" id="codNo" name="contactRadios"
+                                    value="no" />
+                                <label for="codNo" class="form-check-label">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <label class="col-sm-6 col-form-label" for="ship">How To Ship:</label>
+                        <div class="col">
+                            <select class="form-control" name="ship" id="ship">
+                                <option value="">Select...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <label for="shipment" class="col-md-2 col-form-label">Shipment Notes:</label>
+                        <div class="col-md-10">
+                            <textarea class="form-control" id="shipment" name="shipment" rows="8"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
-    
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
     <!-- build:js js/main.js -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
@@ -74,8 +273,9 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="javascript/sc.js"></script>
     <!-- endbuild -->
-    
+
     <script src="javascript/evo-calendar.min.js"></script>
-   
+
 </body>
+
 </html>
