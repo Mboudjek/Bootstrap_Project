@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/evo-calendar.min.css">
+    <link rel="stylesheet" href="css/evo-calendar.midnight-blue.min.css">
+    <!-- endbuild -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    
+    <title>GOWAN MILLING INTRANET</title>
+</head>
+
+<body>
+    <header>
+        <div class="row" id="headerId">
+            <div class="col-4 col-sm-4 col-md-5 mr-auto">
+                <img src="img/gowan_milling2.png" class="img-fluid" />
+            </div>
+            <div class="col-3 col-auto pt-1" id="user">
+                <div class="pt-1" style="font-weight: 900;">
+                    Ivan Monge
+                </div>
+                <div style="font-size: 0.5rem;">
+                    Automation Control Engineer
+                </div>
+            </div>
+        </div>      
+    </header>
+
+    <hr class="divider" size="4px"> 
+
+    
+    <nav class="sidebar bg-black">
+        <div class="position-sticky">
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action" style="background-color:black;opacity:0.7;">
+                    <i class="fa fa-bars fa-2x"></i>    
+                </a>          
+                <a href="#" class="list-group-item list-group-item-action active">
+                    <i class="fa fa-home fa-2x"></i>    
+                </a>    
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fa fa-shopping-cart fa-2x"></i>    
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fa fa-fire-extinguisher fa-2x"></i>    
+                </a>
+                <a role="button" class="btn list-group-item list-group-item-action" id="vacRequestButton">
+                    <i class="fa fa-plane fa-2x"></i>    
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fa fa-cog fa-2x"></i>    
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <!-- build:js js/main.js -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="javascript/sc.js"></script>
+    <!-- endbuild -->
+    
+    <script src="javascript/evo-calendar.min.js"></script>
+   
+</body>
